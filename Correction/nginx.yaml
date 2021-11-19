@@ -1,0 +1,11 @@
+---
+- hosts: front
+  become: true
+  become_user: root
+  become_method: sudo
+  
+  tasks:
+  
+  - name: Install NGINX
+    ansible.builtin.dnf:
+      name: nginx
